@@ -21,7 +21,7 @@ import { CVComponent } from './cv/cv.component'
     ContactComponent,
     FooterComponent,
     NavbarComponent,
-    CV,
+    CVComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
