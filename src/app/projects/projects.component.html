@@ -1,8 +1,19 @@
-<section class="projects">
-  <h2>Mes projets</h2>
-  <ul>
-    <li>StockMaster - App de gestion de stock (Java EE)</li>
-    <li>TalentFlow - App de recrutement (Java EE)</li>
-    <li>Booking Sante - App de reservation medicale</li>
-  </ul>
+<section class="section" id="portfolio">
+  <div class="container text-center">
+    <p class="section-subtitle">What I Did ?</p>
+    <h6 class="section-title mb-6">Portfolio</h6>
+    <div class="row">
+      <div class="col-md-4" *ngFor="let project of projects">
+        <a [routerLink]="['/projects', project.id]" class="portfolio-card">
+          <img [src]="project.imageUrl" alt="{{ project.title }}" class="portfolio-card-img">
+          <span class="portfolio-card-overlay">
+            <span class="portfolio-card-caption">
+              <h4>{{ project.title }}</h4>
+              <p class="font-weight-normal">Category: {{ project.category }}</p>
+            </span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
