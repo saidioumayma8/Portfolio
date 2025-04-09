@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common'; // You might need CommonModule t
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule], // Import ReactiveFormsModule and CommonModule
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.css'
 })
 export class ContactComponent {
   contactForm: FormGroup;
@@ -23,7 +22,7 @@ export class ContactComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log('Form submitted:', this.contactForm.value);
-      
+
     }
   }
 }

@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrls: ['../../assets/css/meyawo.css', '../../assets/vendors/themify-icons/css/themify-icons.css', './home.component.css']
+  styleUrls: []
 })
 export class HomeComponent {
   title = 'Welcome to my Portfolio!';

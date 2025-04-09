@@ -1,26 +1,25 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  liveDemoUrl?: string;
-  githubUrl?: string;
-  category: string;
-}
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
+  selector: 'app-project',
+  imports: [CommonModule],
+  standalone: true,  // ✅ This is the fix!
   templateUrl: './projects.component.html',
-  styleUrls: ['../../assets/css/meyawo.css', '../../assets/vendors/themify-icons/css/themify-icons.css', './projects.component.css']
+  styleUrls: ['./projects.component.css']
 })
 export class ProjectsComponent {
-  projects: Project[] = [
-    // Your project data here
+  projects = [
+    {
+      title: 'StockMaster',
+      link: 'https://github.com/yourusername/stockmaster',
+      image: 'assets/imgs/project-1.jpg'
+    },
+    {
+      title: 'MedicalApp',
+      link: 'https://github.com/yourusername/medical-app',
+      image: 'assets/imgs/project-2.jpg'
+    }
   ];
 }
