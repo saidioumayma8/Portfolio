@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-project',
   imports: [CommonModule],
-  standalone: true,  // ✅ This is the fix!
+  standalone: true,
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
@@ -20,6 +20,11 @@ export class ProjectsComponent {
       title: 'MedicalApp',
       link: 'https://github.com/yourusername/medical-app',
       image: 'assets/imgs/project-2.jpg'
+    },
+    {
+      title: 'Trektrove',
+      link: 'https://github.com/saidioumayma8/TrekTrouve.git',
+      image: 'assets/imgs/trektrove.png'
     }
   ];
 }
