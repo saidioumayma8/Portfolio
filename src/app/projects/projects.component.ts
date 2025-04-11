@@ -14,12 +14,12 @@ export class ProjectsComponent {
     {
       title: 'StockMaster',
       link: 'https://github.com/yourusername/stockmaster',
-      image: 'assets/imgs/project-1.jpg'
+      image: 'assets/imgs/image.png'
     },
     {
       title: 'MedicalApp',
       link: 'https://github.com/yourusername/medical-app',
-      image: 'assets/imgs/project-2.jpg'
+      image: 'assets/imgs/image1.png'
     },
     {
       title: 'Trektrove',

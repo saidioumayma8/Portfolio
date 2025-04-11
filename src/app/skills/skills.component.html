@@ -1,1 +1,18 @@
-<p>skills works!</p>
+<!-- Other sections like <app-projects>... -->
+
+  <app-projects></app-projects>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container text-center">
+      <h2 class="section-title">Mes Compétences</h2>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let skill of skills">
+          <div class="skill-box">
+            <i [class]="skill.icon"></i>
+            <h4>{{ skill.name }}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
