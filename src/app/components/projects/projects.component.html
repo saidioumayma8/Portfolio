@@ -1,0 +1,62 @@
+<section id="projects" class="py-20 bg-gray-800">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold mb-4 text-center">My Projects</h2>
+    <p class="text-gray-400 text-center mb-12">Check out some of my recent work</p>
+    
+    <!-- Creative project cards with hover effects -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div 
+        *ngFor="let project of projects; let i = index" 
+        class="relative group project-card-container"
+      >
+        <!-- Project card with creative styling -->
+        <div class="bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 border border-gray-700">
+          <!-- Project header with gradient -->
+          <div class="h-40 bg-gradient-to-r {{ project.gradient }} w-full flex items-center justify-center relative overflow-hidden">
+            <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+            <i class="fas {{ project.icon }} text-5xl text-white relative z-10"></i>
+            <div class="absolute top-4 right-4 bg-black bg-opacity-30 px-3 py-1 rounded-full text-sm">
+              {{ project.category }}
+            </div>
+          </div>
+          
+          <!-- Project content -->
+          <div class="p-6">
+            <h3 class="text-xl font-bold mb-4">{{ project.title }}</h3>
+            <p class="text-gray-300 mb-6 text-sm leading-relaxed">
+              {{ project.description }}
+            </p>
+            
+            <!-- Technology tags with creative styling -->
+            <div class="flex flex-wrap gap-2 mb-8">
+              <span 
+                *ngFor="let tech of project.technologies"
+                class="tech-tag bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-xs transition-all duration-300 hover:bg-blue-600"
+              >
+                {{ tech }}
+              </span>
+            </div>
+            
+            <!-- Action buttons -->
+            <div class="flex justify-between items-center pt-4 border-t border-gray-700">
+              <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center transition-colors duration-300">
+                <i class="fab fa-github mr-2"></i> Code
+              </a>
+              <a href="#" class="text-green-400 hover:text-green-300 flex items-center transition-colors duration-300">
+                <i class="fas fa-external-link-alt mr-2"></i> Demo
+              </a>
+              <div class="project-number bg-gray-800 w-8 h-8 rounded-full flex items-center justify-center text-gray-400 text-sm">
+                #{{ project.id }}
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Floating element on hover -->
+        <div class="absolute -top-3 -right-3 w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-x-2 -translate-y-2">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

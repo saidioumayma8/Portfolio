@@ -1,0 +1,93 @@
+<section id="contact" class="py-20">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-gray-800 rounded-xl p-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">Let's talk about everything!</h3>
+            <p class="text-gray-300 mb-8 leading-relaxed">
+              Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
+            </p>
+            <div class="space-y-6">
+              <div class="flex items-center">
+                <i class="fas fa-envelope text-blue-400 mr-4 text-xl"></i>
+                <span>oumaymasaidi908@gmail.com</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-phone text-blue-400 mr-4 text-xl"></i>
+                <span>+212 617 432 782</span>
+              </div>
+              <div class="flex items-center">
+                <i class="fas fa-map-marker-alt text-blue-400 mr-4 text-xl"></i>
+                <span>Khénifra, Morocco</span>
+              </div>
+            </div>
+            <div class="flex space-x-4 mt-8">
+              <a href="https://github.com/saidioumayma8" class="text-blue-400 hover:text-white text-2xl">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/oumayma-saidi-756452247" class="text-blue-400 hover:text-white text-2xl">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="text-blue-400 hover:text-white text-2xl">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <form (ngSubmit)="submitForm()" #contactForm="ngForm">
+              <div class="mb-6">
+                <input 
+                  type="text" 
+                  placeholder="Your Name" 
+                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
+                  [(ngModel)]="contact.name"
+                  name="name"
+                  required
+                >
+              </div>
+              <div class="mb-6">
+                <input 
+                  type="email" 
+                  placeholder="Your Email" 
+                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
+                  [(ngModel)]="contact.email"
+                  name="email"
+                  required
+                >
+              </div>
+              <div class="mb-6">
+                <input 
+                  type="text" 
+                  placeholder="Subject" 
+                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
+                  [(ngModel)]="contact.subject"
+                  name="subject"
+                  required
+                >
+              </div>
+              <div class="mb-6">
+                <textarea 
+                  rows="5" 
+                  placeholder="Your Message" 
+                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
+                  [(ngModel)]="contact.message"
+                  name="message"
+                  required
+                ></textarea>
+              </div>
+              <button 
+                type="submit" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-300"
+                [disabled]="!contactForm.form.valid"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

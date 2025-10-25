@@ -1,0 +1,25 @@
+/* Contact component styles */
+form {
+  transition: all 0.3s ease;
+}
+
+input, textarea {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.contact-info-item {
+  transition: transform 0.2s ease;
+}
+
+.contact-info-item:hover {
+  transform: translateX(5px);
+}

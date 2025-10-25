@@ -1,59 +1,120 @@
-# Portfolio
+# Java & Angular Developer Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+A modern, responsive portfolio website for Java & Angular developers built with Angular 20 and Tailwind CSS.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- **Modern UI Design**: Clean, professional design with dark theme
+- **Responsive Layout**: Works on all device sizes (mobile, tablet, desktop)
+- **Component-Based Architecture**: Built with Angular standalone components
+- **Tailwind CSS**: Utility-first CSS framework for rapid UI development
+- **Interactive Elements**: Smooth animations and transitions
+- **Performance Optimized**: Fast loading and optimized for SEO
 
-```bash
-ng serve
+## Technologies Used
+
+- **Angular 20**: Latest version of the Angular framework
+- **TypeScript**: Strongly typed programming language for Angular
+- **Tailwind CSS**: Utility-first CSS framework
+- **HTML5 & CSS3**: Modern web standards
+- **Font Awesome**: Icon library for vector icons
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/
+│   │   ├── header/
+│   │   ├── hero/
+│   │   ├── skills/
+│   │   └── projects/
+│   ├── app.html
+│   ├── app.ts
+│   └── app.css
+├── assets/
+│   └── OumaymaSAIDI-CV.pdf
+├── styles.css
+└── index.html
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Components
 
-## Code scaffolding
+1. **Header Component**: Navigation bar with responsive mobile menu
+2. **Hero Component**: Main introduction section with profile and call-to-action buttons
+3. **About Section**: Personal introduction and skills overview
+4. **Skills Component**: Detailed breakdown of technical skills with progress bars
+5. **Projects Component**: Showcase of projects with descriptions and technologies used
+6. **Contact Section**: Contact information and form
+7. **Footer Component**: Copyright and additional information
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Development
 
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- npm (comes with Node.js)
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd portfolio
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+
+To start the development server:
 ```bash
-ng generate component component-name
+npm start
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The application will be available at `http://localhost:4200`.
 
+### Building for Production
+
+To build the application for production:
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+The built files will be in the `dist/` directory.
 
-To build the project run:
+## Customization
 
-```bash
-ng build
-```
+To customize this portfolio for your own use:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+1. Update personal information in the component files
+2. Replace profile images and project screenshots
+3. Modify the skills section to reflect your actual skills
+4. Update the projects with your own work
+5. Change contact information to your own details
+6. Update social media links
+7. Replace the CV PDF with your own
 
-## Running unit tests
+## Deployment
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+This portfolio can be deployed to any static hosting service such as:
+- GitHub Pages
+- Netlify
+- Vercel
+- Firebase Hosting
+- AWS S3
 
-```bash
-ng test
-```
+## License
 
-## Running end-to-end tests
+This project is licensed under the MIT License.
 
-For end-to-end (e2e) testing, run:
+## Author
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+John Developer - Java & Angular Specialist

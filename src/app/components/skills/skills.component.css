@@ -1,0 +1,99 @@
+/* Skills component styles - Creative Design */
+
+/* Hexagon shape styling */
+.hexagon-container {
+  perspective: 1000px;
+}
+
+.hexagon {
+  position: relative;
+  transition: all 0.5s ease;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.hexagon:hover {
+  transform: translateY(-10px) rotate(2deg);
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+/* Different colored skill bars for each category */
+.skill-bar-0 {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.skill-bar-1 {
+  background: linear-gradient(90deg, #10b981, #34d399);
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.skill-bar-2 {
+  background: linear-gradient(90deg, #8b5cf6, #a78bfa);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+}
+
+/* Skill item animations */
+.skill-item {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.skill-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.skill-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.skill-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.skill-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating animation for hexagons */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hexagon-container:nth-child(2n) .hexagon {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.hexagon-container:nth-child(3n) .hexagon {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hexagon {
+    padding: 1.5rem !important;
+  }
+  
+  .hexagon:hover {
+    transform: translateY(-5px);
+  }
+}
