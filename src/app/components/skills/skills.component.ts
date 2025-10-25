@@ -22,35 +22,44 @@ interface Skill {
 export class SkillsComponent {
   skillCategories: SkillCategory[] = [
     {
-      name: 'Backend Technologies',
+      name: 'Backend Development',
       icon: 'fas fa-server text-blue-400',
       skills: [
         { name: 'Java & Spring Boot', level: 85 },
-        { name: 'Spring Framework', level: 80 },
-        { name: 'Spring Security', level: 75 },
         { name: 'Node.js & Express', level: 70 },
         { name: 'PHP & Laravel', level: 65 }
       ]
     },
     {
-      name: 'Frontend Frameworks',
+      name: 'Frontend Development',
       icon: 'fas fa-laptop-code text-green-400',
       skills: [
         { name: 'Angular', level: 85 },
         { name: 'React.js', level: 80 },
-        { name: 'Vue.js', level: 70 },
-        { name: 'JavaScript/TypeScript', level: 85 },
-        { name: 'HTML5/CSS3', level: 90 }
+        { name: 'JavaScript/TypeScript', level: 85 }
       ]
     },
     {
-      name: 'Tools & DevOps',
+      name: 'Databases',
       icon: 'fas fa-database text-purple-400',
       skills: [
         { name: 'MySQL & PostgreSQL', level: 80 },
+        { name: 'MongoDB', level: 70 }
+      ]
+    },
+    {
+      name: 'DevOps & Tools',
+      icon: 'fas fa-cogs text-yellow-400',
+      skills: [
         { name: 'Docker & Kubernetes', level: 70 },
         { name: 'Git & GitHub', level: 85 },
-        { name: 'Jenkins & CI/CD', level: 65 },
+        { name: 'CI/CD', level: 65 }
+      ]
+    },
+    {
+      name: 'Cloud Services',
+      icon: 'fas fa-cloud text-cyan-400',
+      skills: [
         { name: 'AWS Basics', level: 60 }
       ]
     }
@@ -59,19 +68,16 @@ export class SkillsComponent {
   getSkillIcon(skillName: string): string {
     const iconMap: { [key: string]: string } = {
       'Java & Spring Boot': 'fab fa-java',
-      'Spring Framework': 'fas fa-leaf',
-      'Spring Security': 'fas fa-shield-alt',
       'Node.js & Express': 'fab fa-node-js',
       'PHP & Laravel': 'fab fa-php',
       'Angular': 'fab fa-angular',
       'React.js': 'fab fa-react',
-      'Vue.js': 'fab fa-vuejs',
       'JavaScript/TypeScript': 'fab fa-js',
-      'HTML5/CSS3': 'fas fa-code',
       'MySQL & PostgreSQL': 'fas fa-database',
+      'MongoDB': 'fas fa-leaf',
       'Docker & Kubernetes': 'fab fa-docker',
       'Git & GitHub': 'fab fa-github',
-      'Jenkins & CI/CD': 'fab fa-jenkins',
+      'CI/CD': 'fas fa-sync',
       'AWS Basics': 'fab fa-aws'
     };
 
