@@ -3,69 +3,35 @@
     <h2 class="text-3xl font-bold mb-12 text-center">About Me</h2>
     <div class="flex flex-col md:flex-row items-center">
       <div class="md:w-1/2 mb-10 md:mb-0 flex justify-center">
-        <div class="w-64 h-64 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-6xl">
-          👩‍💻
+        <div class="relative">
+          <!-- Profile picture - using your actual image -->
+          <div class="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-500 shadow-2xl">
+            <img src="assets/oumayma.jpg" alt="Oumayma Saidi" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center\'><span class=\'text-white text-4xl\'>OS</span></div>'">
+          </div>
+          <div class="absolute -bottom-2 -right-2 w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-xl shadow-lg">
+            <i class="fas fa-code text-white"></i>
+          </div>
         </div>
       </div>
       <div class="md:w-1/2 md:pl-12">
-        <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+        <h3 class="text-2xl font-semibold mb-4">Oumayma Saidi</h3>
         <p class="text-gray-300 mb-6">
           I'm a passionate web developer from Khénifra, Morocco, currently pursuing IT System & Custom Software Development.
         </p>
-        <p class="text-gray-300 mb-8">
+        <p class="text-gray-300 mb-6">
           I build scalable web applications using Java, Spring Boot, Angular, and modern frontend technologies.
         </p>
+        <p class="text-gray-300 mb-8">
+          With expertise in both backend and frontend development, I create seamless user experiences and robust server-side solutions.
+        </p>
         
-        <h4 class="text-xl font-semibold mb-4">Key Skills</h4>
-        <div class="grid grid-cols-4 gap-4">
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center mb-2">
-              <i class="fab fa-java text-blue-400"></i>
-            </div>
-            <span class="text-xs text-center">Java</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-red-900 flex items-center justify-center mb-2">
-              <i class="fab fa-angular text-red-400"></i>
-            </div>
-            <span class="text-xs text-center">Angular</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-green-900 flex items-center justify-center mb-2">
-              <i class="fab fa-react text-green-400"></i>
-            </div>
-            <span class="text-xs text-center">React</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-yellow-900 flex items-center justify-center mb-2">
-              <i class="fab fa-js text-yellow-400"></i>
-            </div>
-            <span class="text-xs text-center">JavaScript</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center mb-2">
-              <i class="fab fa-node-js text-green-400"></i>
-            </div>
-            <span class="text-xs text-center">Node.js</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-purple-900 flex items-center justify-center mb-2">
-              <i class="fab fa-php text-purple-400"></i>
-            </div>
-            <span class="text-xs text-center">PHP</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-red-900 flex items-center justify-center mb-2">
-              <i class="fas fa-database text-red-400"></i>
-            </div>
-            <span class="text-xs text-center">SQL</span>
-          </div>
-          <div class="flex flex-col items-center">
-            <div class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center mb-2">
-              <i class="fab fa-docker text-blue-400"></i>
-            </div>
-            <span class="text-xs text-center">Docker</span>
-          </div>
+        <div class="flex space-x-4">
+          <a href="https://github.com/saidioumayma8" class="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition duration-300 flex items-center">
+            <i class="fab fa-github mr-2"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/oumayma-saidi-756452247" class="bg-blue-700 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition duration-300 flex items-center">
+            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+          </a>
         </div>
       </div>
     </div>

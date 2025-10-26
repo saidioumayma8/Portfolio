@@ -1,30 +1,103 @@
-<section id="skills" class="py-20">
+<section id="skills" class="py-20 bg-gray-800">
   <div class="container mx-auto px-4">
     <h2 class="text-4xl font-bold mb-4 text-center">My Skills</h2>
     <p class="text-gray-400 text-center mb-12">Technologies I work with</p>
     
-    <!-- Category cards layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div 
-        *ngFor="let category of skillCategories; let i = index" 
-        class="group"
-      >
-        <!-- Category card -->
-        <div class="bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 h-full">
-          <div class="text-center">
-            <i [class]="category.icon + ' text-3xl mb-3 block'"></i>
-            <h3 class="text-xl font-bold mb-4">{{ category.name }}</h3>
-            
-            <!-- Skill icons with better spacing -->
-            <div class="flex flex-wrap justify-center gap-3 mt-2">
-              <div *ngFor="let skill of category.skills" class="skill-item group relative">
-                <div class="w-14 h-14 rounded-lg bg-gray-700 flex items-center justify-center mx-auto transition-all duration-300 group-hover:bg-blue-600 group-hover:scale-110">
-                  <i [class]="getSkillIcon(skill.name) + ' text-xl'"></i>
-                </div>
-                <span class="text-xs mt-1 block text-center">{{ skill.name }}</span>
-              </div>
-            </div>
-          </div>
+    <!-- Skills organized by category with proper spacing -->
+    <div class="max-w-6xl mx-auto">
+      <!-- Backend Skills -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-server text-blue-500 mr-3"></i>
+          Backend Development
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span 
+            *ngFor="let skill of getBackendSkills()"
+            class="bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-blue-600"
+          >
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+      
+      <!-- Frontend Skills -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-laptop-code text-green-500 mr-3"></i>
+          Frontend Development
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span 
+            *ngFor="let skill of getFrontendSkills()"
+            class="bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-green-600"
+          >
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+      
+      <!-- DevOps Skills -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-cogs text-purple-500 mr-3"></i>
+          DevOps & Tools
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span 
+            *ngFor="let skill of getDevOpsSkills()"
+            class="bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-purple-600"
+          >
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+      
+      <!-- Database Skills -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-database text-red-500 mr-3"></i>
+          Databases
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span 
+            *ngFor="let skill of getDatabaseSkills()"
+            class="bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-red-600"
+          >
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+      
+      <!-- Methodology Skills -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-tasks text-yellow-500 mr-3"></i>
+          Methodologies
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span 
+            *ngFor="let skill of getMethodologySkills()"
+            class="bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-yellow-600"
+          >
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+      
+      <!-- Design Skills -->
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold mb-6 flex items-center">
+          <i class="fas fa-palette text-cyan-500 mr-3"></i>
+          Design & Tools
+        </h3>
+        <div class="flex flex-wrap gap-4">
+          <span 
+            *ngFor="let skill of getDesignSkills()"
+            class="bg-gray-700 text-gray-200 px-4 py-2 rounded-lg text-sm transition-all duration-300 hover:bg-cyan-600"
+          >
+            {{ skill.name }}
+          </span>
         </div>
       </div>
     </div>

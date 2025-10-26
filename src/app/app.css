@@ -1,56 +1,63 @@
-/* Custom styles for the portfolio */
+/* Global styles for the application */
 
-/* Hero section animation */
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+/* Dark theme (default) */
+:root.dark {
+  --bg-primary: #111827;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #374151;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --border-color: #374151;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #8b5cf6;
 }
 
-.floating {
-  animation: float 6s ease-in-out infinite;
+/* Light theme */
+:root.light {
+  --bg-primary: #f9fafb;
+  --bg-secondary: #f3f4f6;
+  --bg-tertiary: #e5e7eb;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-tertiary: #6b7280;
+  --border-color: #d1d5db;
+  --accent-primary: #2563eb;
+  --accent-secondary: #7c3aed;
 }
 
-/* Project card hover effect */
-.project-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Apply theme variables */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
+/* Ensure all components use theme variables */
+.bg-gray-900 {
+  background-color: var(--bg-secondary) !important;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-  width: 8px;
+.bg-gray-800 {
+  background-color: var(--bg-primary) !important;
 }
 
-::-webkit-scrollbar-track {
-  background: #1f2937;
+.bg-gray-700 {
+  background-color: var(--bg-tertiary) !important;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #3b82f6;
-  border-radius: 4px;
+.text-gray-300 {
+  color: var(--text-secondary) !important;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #2563eb;
+.text-gray-400 {
+  color: var(--text-tertiary) !important;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
+.border-gray-700 {
+  border-color: var(--border-color) !important;
+}
+
+.border-gray-800 {
+  border-color: var(--border-color) !important;
 }

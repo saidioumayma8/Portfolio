@@ -1,91 +1,105 @@
-<section id="contact" class="py-20">
+<section id="contact" class="py-16 bg-gray-900">
   <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold mb-12 text-center">Get In Touch</h2>
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-gray-800 rounded-xl p-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+        Let's Work Together
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto">
+        Have a project in mind? Feel free to reach out and let's create something amazing together.
+      </p>
+    </div>
+    
+    <div class="max-w-2xl mx-auto">
+      <!-- Contact form - To implement email functionality, you'll need to add a backend service -->
+      <form class="space-y-6" (submit)="onSubmit($event)">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
-            <h3 class="text-2xl font-semibold mb-6">Let's talk about everything!</h3>
-            <p class="text-gray-300 mb-8 leading-relaxed">
-              Have a project in mind or want to discuss potential opportunities? Feel free to reach out!
-            </p>
-            <div class="space-y-6">
-              <div class="flex items-center">
-                <i class="fas fa-envelope text-blue-400 mr-4 text-xl"></i>
-                <span>oumaymasaidi908@gmail.com</span>
-              </div>
-              <div class="flex items-center">
-                <i class="fas fa-phone text-blue-400 mr-4 text-xl"></i>
-                <span>+212 617 432 782</span>
-              </div>
-              <div class="flex items-center">
-                <i class="fas fa-map-marker-alt text-blue-400 mr-4 text-xl"></i>
-                <span>Khénifra, Morocco</span>
-              </div>
+            <input 
+              type="text" 
+              placeholder="Your Name"
+              class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 placeholder-gray-500"
+              required
+            >
+          </div>
+          
+          <div>
+            <input 
+              type="email" 
+              placeholder="Your Email"
+              class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 placeholder-gray-500"
+              required
+            >
+          </div>
+        </div>
+        
+        <div>
+          <input 
+            type="text" 
+            placeholder="Subject"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 placeholder-gray-500"
+            required
+          >
+        </div>
+        
+        <div>
+          <textarea 
+            rows="5" 
+            placeholder="Your Message"
+            class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition duration-300 placeholder-gray-500 resize-none"
+            required
+          ></textarea>
+        </div>
+        
+        <div class="text-center">
+          <button 
+            type="submit" 
+            class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105 shadow-lg"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+      
+      <div class="mt-12 pt-8 border-t border-gray-800">
+        <div class="flex flex-wrap justify-center gap-8">
+          <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full bg-blue-900/30 flex items-center justify-center mr-3">
+              <i class="fas fa-envelope text-blue-400"></i>
             </div>
-            <div class="flex space-x-4 mt-8">
-              <a href="https://github.com/saidioumayma8" class="text-blue-400 hover:text-white text-2xl">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://www.linkedin.com/in/oumayma-saidi-756452247" class="text-blue-400 hover:text-white text-2xl">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="#" class="text-blue-400 hover:text-white text-2xl">
-                <i class="fab fa-twitter"></i>
-              </a>
+            <div>
+              <p class="text-gray-400 text-sm">Email</p>
+              <p class="text-white">oumaymasaidi908@gmail.com</p>
             </div>
           </div>
-          <div>
-            <form (ngSubmit)="submitForm()" #contactForm="ngForm">
-              <div class="mb-6">
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
-                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
-                  [(ngModel)]="contact.name"
-                  name="name"
-                  required
-                >
-              </div>
-              <div class="mb-6">
-                <input 
-                  type="email" 
-                  placeholder="Your Email" 
-                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
-                  [(ngModel)]="contact.email"
-                  name="email"
-                  required
-                >
-              </div>
-              <div class="mb-6">
-                <input 
-                  type="text" 
-                  placeholder="Subject" 
-                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
-                  [(ngModel)]="contact.subject"
-                  name="subject"
-                  required
-                >
-              </div>
-              <div class="mb-6">
-                <textarea 
-                  rows="5" 
-                  placeholder="Your Message" 
-                  class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:border-blue-400"
-                  [(ngModel)]="contact.message"
-                  name="message"
-                  required
-                ></textarea>
-              </div>
-              <button 
-                type="submit" 
-                class="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition duration-300"
-                [disabled]="!contactForm.form.valid"
-              >
-                Send Message
-              </button>
-            </form>
+          
+          <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full bg-green-900/30 flex items-center justify-center mr-3">
+              <i class="fas fa-phone text-green-400"></i>
+            </div>
+            <div>
+              <p class="text-gray-400 text-sm">Phone</p>
+              <p class="text-white">+212 617 432 782</p>
+            </div>
           </div>
+          
+          <div class="flex items-center">
+            <div class="w-10 h-10 rounded-full bg-purple-900/30 flex items-center justify-center mr-3">
+              <i class="fas fa-map-marker-alt text-purple-400"></i>
+            </div>
+            <div>
+              <p class="text-gray-400 text-sm">Location</p>
+              <p class="text-white">Khénifra, Morocco</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-center mt-8 space-x-6">
+          <a href="https://github.com/saidioumayma8" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition duration-300">
+            <i class="fab fa-github text-xl text-gray-300"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/oumayma-saidi-756452247" class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition duration-300">
+            <i class="fab fa-linkedin-in text-xl text-gray-300"></i>
+          </a>
         </div>
       </div>
     </div>

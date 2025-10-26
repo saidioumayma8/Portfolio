@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  // Skills are now displayed as icons in the template
+  // Skills have been moved to the dedicated skills section
 }
