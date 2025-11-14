@@ -1,4 +1,4 @@
-# Java & Angular Developer Portfolio
+# Angular Developer Portfolio
 
 A modern, responsive portfolio website for Java & Angular developers built with Angular 20 and Tailwind CSS.
 
