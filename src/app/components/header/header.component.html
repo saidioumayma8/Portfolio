@@ -1,0 +1,36 @@
+<header class="fixed w-full z-50 bg-gray-900/80 backdrop-blur-md border-b border-gray-800">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
+        OS
+      </div>
+      
+      <nav class="hidden md:block">
+        <ul class="flex space-x-8">
+          <li><a href="#home" class="text-gray-300 hover:text-white transition-colors duration-300">Home</a></li>
+          <li><a href="#about" class="text-gray-300 hover:text-white transition-colors duration-300">About</a></li>
+          <li><a href="#skills" class="text-gray-300 hover:text-white transition-colors duration-300">Skills</a></li>
+          <li><a href="#projects" class="text-gray-300 hover:text-white transition-colors duration-300">Projects</a></li>
+          <li><a href="#contact" class="text-gray-300 hover:text-white transition-colors duration-300">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <div class="flex items-center space-x-4">
+        <!-- Theme toggle button -->
+        <app-theme-toggle></app-theme-toggle>
+        
+        <a 
+          href="assets/OumaymaSAIDI-CV.pdf" 
+          download 
+          class="hidden md:inline-block bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 text-sm"
+        >
+          Download CV
+        </a>
+        
+        <button class="md:hidden text-gray-300 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,68 @@
+<section id="contact" class="py-14 bg-gradient-to-b from-gray-900 via-purple-900/20 to-gray-900 relative overflow-hidden">
+  <!-- Interactive Particle Canvas -->
+  <canvas #contactCanvas class="absolute inset-0 w-full h-full pointer-events-none z-0"></canvas>
+  
+  <!-- Animated Background -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 floating-orb"></div>
+    <div class="absolute w-96 h-96 bg-pink-500/10 rounded-full blur-3xl top-20 right-20 floating-orb" style="animation-delay: 1s;"></div>
+    <div class="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl bottom-20 left-20 floating-orb" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 animate-gradient">
+        Get In Touch
+      </h2>
+      <p class="text-gray-400 text-xs max-w-2xl mx-auto mb-5">
+        Feel free to reach out for collaborations or just a friendly hello
+      </p>
+    </div>
+    
+    <div class="max-w-2xl mx-auto">
+      <!-- Contact Form -->
+      <form class="simple-message-form" (submit)="onSubmit($event)">
+        
+        <!-- Success/Loading States -->
+        <div *ngIf="isSubmitting" class="form-overlay">
+          <div class="loader"></div>
+          <p class="text-white font-bold mt-4">Sending...</p>
+        </div>
+        
+        <div *ngIf="formState === 'success'" class="form-overlay success">
+          <i class="fas fa-check-circle text-6xl text-green-400 mb-4"></i>
+          <p class="text-white font-bold text-xl">Message Sent!</p>
+        </div>
+        
+        <div class="form-grid">
+          <input type="text" placeholder="Your Name" required class="form-input">
+          <input type="email" placeholder="Your Email" required class="form-input">
+        </div>
+        
+        <input type="text" placeholder="Subject" required class="form-input">
+        
+        <textarea rows="5" placeholder="Your message..." required class="form-input"></textarea>
+        
+        <button type="submit" [disabled]="isSubmitting" class="submit-btn">
+          <span>{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
+          <i class="fas fa-paper-plane ml-2"></i>
+        </button>
+      </form>
+
+      <!-- Social Links -->
+      <div class="flex items-center justify-center gap-4 mt-8">
+        <p class="text-gray-400 text-sm">Or connect with me:</p>
+        <a href="https://www.linkedin.com/in/oumayma-saidi-756452247" 
+           target="_blank"
+           class="social-icon-btn group">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/saidioumayma8" 
+           target="_blank"
+           class="social-icon-btn group">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

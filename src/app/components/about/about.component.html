@@ -1,0 +1,53 @@
+<section id="about" class="py-16 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-800 relative overflow-hidden">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute w-72 h-72 bg-blue-500/10 rounded-full blur-3xl top-10 left-10 floating-orb"></div>
+    <div class="absolute w-64 h-64 bg-purple-500/10 rounded-full blur-3xl bottom-10 right-10 floating-orb" style="animation-delay: 1.5s;"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">About Me</h2>
+    <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative group">
+          <!-- Compact Profile picture -->
+          <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-3 border-blue-500 shadow-2xl transition-all duration-300 group-hover:scale-105 group-hover:rotate-3">
+            <img src="assets/oumayma.jpg" alt="Oumayma Saidi" class="w-full h-full object-cover" onerror="this.parentElement.innerHTML='<div class=\'w-full h-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center\'><span class=\'text-white text-3xl\'>OS</span></div>'">
+          </div>
+          <!-- Smaller code badge -->
+          <div class="absolute -bottom-1 -right-1 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+            <i class="fas fa-code text-white text-sm"></i>
+          </div>
+          <!-- Floating skill icons -->
+          <div class="absolute -top-3 -left-3 w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center text-white animate-float shadow-lg">
+            <i class="fas fa-laptop-code text-xs"></i>
+          </div>
+          <div class="absolute -bottom-3 left-8 w-9 h-9 bg-purple-500 rounded-full flex items-center justify-center text-white animate-float-delayed shadow-lg">
+            <i class="fas fa-database text-xs"></i>
+          </div>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <h3 class="text-xl md:text-2xl font-semibold mb-3 text-blue-400">Oumayma Saidi</h3>
+        <p class="text-gray-300 mb-3 text-sm md:text-base">
+          I'm a passionate web developer from Khénifra, Morocco, currently pursuing IT System & Custom Software Development.
+        </p>
+        <p class="text-gray-300 mb-3 text-sm md:text-base">
+          I build scalable web applications using Java, Spring Boot, Angular, and modern frontend technologies.
+        </p>
+        <p class="text-gray-300 mb-6 text-sm md:text-base">
+          With expertise in both backend and frontend development, I create seamless user experiences and robust server-side solutions.
+        </p>
+        
+        <div class="flex gap-3">
+          <a href="https://github.com/saidioumayma8" class="group bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center text-sm hover:scale-105">
+            <i class="fab fa-github mr-2 group-hover:rotate-12 transition-transform"></i> GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/oumayma-saidi-756452247" class="group bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-all duration-300 flex items-center text-sm hover:scale-105">
+            <i class="fab fa-linkedin mr-2 group-hover:rotate-12 transition-transform"></i> LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

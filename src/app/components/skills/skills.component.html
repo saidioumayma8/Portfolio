@@ -1,0 +1,121 @@
+<section id="skills" class="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+  <!-- Interactive Particle Canvas Background -->
+  <canvas #particleCanvas class="absolute inset-0 w-full h-full pointer-events-none"></canvas>
+  
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 overflow-hidden pointer-events-none">
+    <div class="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl -top-20 -left-20 floating-orb"></div>
+    <div class="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -bottom-20 -right-20 floating-orb" style="animation-delay: 2s;"></div>
+    <div class="absolute w-64 h-64 bg-pink-500/10 rounded-full blur-3xl top-1/2 right-1/4 floating-orb" style="animation-delay: 4s;"></div>
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="text-5xl md:text-6xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 animate-gradient">
+        Tech Arsenal
+      </h2>
+      <p class="text-gray-400 text-lg mb-8">Interactive skill visualization - Hover and explore!</p>
+    </div>
+
+    <!-- Skill Categories with Progress Bars -->
+    <div class="max-w-4xl mx-auto space-y-6">
+      <div class="category-progress-card">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="category-icon bg-blue-500/20">
+              <i class="fas fa-server text-blue-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Backend Development</h3>
+          </div>
+          <span class="text-gray-400">{{ getBackendSkills().length }} skills</span>
+        </div>
+        <div class="skill-tags-container">
+          <span *ngFor="let skill of getBackendSkills()" 
+                class="skill-tag-modern"
+                (mouseenter)="onSkillHover(skill.name)"
+                (mouseleave)="onSkillLeave()"
+                [class.hovered]="hoveredSkill === skill.name">
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+
+      <div class="category-progress-card">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="category-icon bg-green-500/20">
+              <i class="fas fa-laptop-code text-green-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Frontend Development</h3>
+          </div>
+          <span class="text-gray-400">{{ getFrontendSkills().length }} skills</span>
+        </div>
+        <div class="skill-tags-container">
+          <span *ngFor="let skill of getFrontendSkills()" 
+                class="skill-tag-modern green"
+                (mouseenter)="onSkillHover(skill.name)"
+                (mouseleave)="onSkillLeave()"
+                [class.hovered]="hoveredSkill === skill.name">
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+
+      <div class="category-progress-card">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="category-icon bg-purple-500/20">
+              <i class="fas fa-cogs text-purple-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">DevOps & Cloud</h3>
+          </div>
+          <span class="text-gray-400">{{ getDevOpsSkills().length }} skills</span>
+        </div>
+        <div class="skill-tags-container">
+          <span *ngFor="let skill of getDevOpsSkills()" 
+                class="skill-tag-modern purple"
+                (mouseenter)="onSkillHover(skill.name)"
+                (mouseleave)="onSkillLeave()"
+                [class.hovered]="hoveredSkill === skill.name">
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+
+      <div class="category-progress-card">
+        <div class="flex items-center justify-between mb-3">
+          <div class="flex items-center gap-3">
+            <div class="category-icon bg-red-500/20">
+              <i class="fas fa-database text-red-400"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white">Database Management</h3>
+          </div>
+          <span class="text-gray-400">{{ getDatabaseSkills().length }} skills</span>
+        </div>
+        <div class="skill-tags-container">
+          <span *ngFor="let skill of getDatabaseSkills()" 
+                class="skill-tag-modern red"
+                (mouseenter)="onSkillHover(skill.name)"
+                (mouseleave)="onSkillLeave()"
+                [class.hovered]="hoveredSkill === skill.name">
+            {{ skill.name }}
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Hover Info Display -->
+    <div class="fixed bottom-8 right-8 bg-gray-800/90 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/50 shadow-2xl transition-all duration-300"
+         *ngIf="hoveredSkill">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+          <i class="fas fa-info-circle text-purple-400"></i>
+        </div>
+        <div>
+          <p class="text-sm text-gray-400">Currently viewing</p>
+          <p class="text-lg font-bold text-white">{{ hoveredSkill }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
